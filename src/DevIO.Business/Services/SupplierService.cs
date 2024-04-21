@@ -7,8 +7,8 @@ namespace DevIO.Business.Services;
 public class SupplierService : BaseService, ISupplierService
 {
     private readonly ISupplierRepository _supplierRepository;
-
-    public SupplierService(ISupplierRepository supplierRepository)
+    public SupplierService(ISupplierRepository supplierRepository,
+                           INotifier notifier) : base(notifier)
     {
         _supplierRepository = supplierRepository;
     }
