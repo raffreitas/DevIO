@@ -1,7 +1,7 @@
 ﻿using DevIO.Business.Models;
 using FluentValidation;
 
-namespace DevIO.Business.Validations;
+namespace DevIO.Business.Models.Validations;
 
 public class ProductValidation : AbstractValidator<Product>
 {
@@ -10,7 +10,7 @@ public class ProductValidation : AbstractValidator<Product>
         RuleFor(p => p.Name)
             .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
             .Length(2, 200).WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");
-        
+
         RuleFor(p => p.Description)
             .NotEmpty().WithMessage("O campo {PropertyName} precisa ser fornecido")
             .Length(2, 1000).WithMessage("O campo {PropertyName} precisa ter entre {MinLength} e {MaxLength} caracteres");

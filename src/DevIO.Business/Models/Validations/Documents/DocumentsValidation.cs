@@ -1,4 +1,4 @@
-﻿namespace DevIO.Business.Validations.Documents;
+﻿namespace DevIO.Business.Models.Validations.Documents;
 
 public class CpfValidation
 {
@@ -143,7 +143,7 @@ public class CheckDigit
             if (++m >= _multipliers.Count) m = 0;
         }
 
-        var mod = (sum % Module);
+        var mod = sum % Module;
         var result = _complementaryModule ? Module - mod : mod;
 
         return _substitutions.ContainsKey(result) ? _substitutions[result] : result.ToString();

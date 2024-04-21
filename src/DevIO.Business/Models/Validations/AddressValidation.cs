@@ -1,7 +1,7 @@
 ﻿using DevIO.Business.Models;
 using FluentValidation;
 
-namespace DevIO.Business.Validations;
+namespace DevIO.Business.Models.Validations;
 
 public class AddressValidation : AbstractValidator<Address>
 {
