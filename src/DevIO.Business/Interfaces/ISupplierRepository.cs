@@ -8,4 +8,5 @@ public interface ISupplierRepository : IRepository<Supplier>
     Task<Supplier> GetSupplierProductsAddress(Guid id);
 
     Task<Address> GetAddressBySupplier(Guid supplerId);
+    Task DeleteAddressSupplier(Address address);
 }

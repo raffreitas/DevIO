@@ -11,4 +11,6 @@ public class Supplier : Entity
     public bool Active { get; set; }
 
     public Address? Address { get; set; }
+
+    public IEnumerable<Product> Products { get; set; }
 }
